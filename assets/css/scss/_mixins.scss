@@ -1,0 +1,22 @@
+@mixin eliminat_float_effect {
+    /***eliminate floating effect***/
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@mixin default_body_properties {
+    font-family: "Open Sans",sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+}
+
+@mixin rounded-corners {
+  $rounded-corner-radius: 4px;
+  -webkit-border-radius: $rounded-corner-radius;
+  -moz-border-radius: $rounded-corner-radius;
+  -ms-border-radius: $rounded-corner-radius;
+  border-radius: $rounded-corner-radius;
+}

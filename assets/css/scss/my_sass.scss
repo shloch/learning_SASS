@@ -1,0 +1,48 @@
+@import 'colors';
+@import 'mixins';
+
+body {
+      @include default_body_properties;
+}
+
+.flower{
+      min-height: 500px;
+      border:1px solid $large_border_color;
+      @include eliminat_float_effect;
+
+      .side-blk {
+            width: 40%;
+            float: right;
+            margin: auto;
+            border: 1px solid $inner_block_boder_color;
+            padding: 15px;
+            margin-right: 20px;
+            margin-top:20px;
+            @include rounded-corners;
+
+            // let this floating side block take bigger space on smaller screens
+            @media screen and (max-width:760px) {
+                  width: 98%;
+                  margin: 1em;
+                  float: left;
+                  margin: 0;
+            }
+      }
+}
+
+h1 {
+      color: $h1_colors;
+}
+
+h2 {
+      color: $h2_colors;
+}
+
+h3 {
+      color: $h3_colors;
+}
+
+
+/**** sass --watch my_sass.scss:../in.css ***/
+
+
